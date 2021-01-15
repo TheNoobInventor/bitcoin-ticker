@@ -32,7 +32,7 @@ parameters = {
 
 headers = {
     'Accepts': 'application/json',
-    'X-CMC_PRO_API_KEY': 'e3f4e07f-e1ba-4ae2-a368-32caafafa1ca'
+    'X-CMC_PRO_API_KEY': 'API-KEY'
 }
 
 #---
@@ -73,6 +73,4 @@ except (ConnectionError, Timeout, TooManyRedirects) as e:
 # think the data updates every 60 seconds..confirm
 # Add keyboard interrupt
 # Polish up and comment code
-# is try-while-except a good way of coding this?
-# percentage change and link it to LEDs or fash for now
 # hide the key I used or just use a filler so that people can sign up for theirs or use a "free" key in the readme
