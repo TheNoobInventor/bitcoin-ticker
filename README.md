@@ -1,1 +1,1 @@
-# bitcoin-ticker
+# LCD Bitcoin Ticker
