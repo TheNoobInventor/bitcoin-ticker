@@ -13,12 +13,10 @@ LCD_LINE_2 = 0xC0 # LCD RAM address for the 2nd line
 #--- Initialize display
 lcd.init(25,24,23,17,18,22,16)
 
-
 #---
 #GPIO.setmode(GPIO.BCM) already set inlcdlib
-GPIO.setwarnings(False)
-greenLedPin = 14 #17 #38
-redLedPin = 15 #27 #40
+greenLedPin = 27 # 14 #17 #38
+redLedPin =4 #27 #40
 GPIO.setup(greenLedPin, GPIO.OUT)
 GPIO.setup(redLedPin, GPIO.OUT)
 
@@ -32,7 +30,7 @@ parameters = {
 
 headers = {
     'Accepts': 'application/json',
-    'X-CMC_PRO_API_KEY': 'API-KEY'
+    'X-CMC_PRO_API_KEY': 'API-KEY' # Replace 'API-KEY' with the key provided from Coinmarketcap
 }
 
 #---
@@ -65,12 +63,28 @@ try:
         else:
             GPIO.output(redLedPin, GPIO.HIGH)
         
-        sleep(15) # why this?
+        # Add delay to request an update every minute
+        sleep(60)
 
+#        
 except (ConnectionError, Timeout, TooManyRedirects) as e:
     print(e)
 
-# think the data updates every 60 seconds..confirm
-# Add keyboard interrupt
-# Polish up and comment code
+#    
+except KeyboardInterrupt:
+    
+    # Clear lcd screen
+    lcd.string("", LCD_LINE_1)
+    lcd.string("", LCD_LINE_2)
+
+# is a comment necessary?    
+finally:
+    
+    # Clean up GPIO pins   
+    GPIO.cleanup()
+
+# Rate limit of 30 requests per minute
+# Most endpoints update every minute
+# So we are adding 55 second delay not to request a lot since we are on the basic api plan
+# Polish up and comment code. Have consistent commenting style
 # hide the key I used or just use a filler so that people can sign up for theirs or use a "free" key in the readme
