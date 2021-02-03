@@ -1,3 +1,10 @@
+"""
+
+This program outputs the current Bitcoin (BTC) price and its 24 hour percentage change onto a 16x2 LCD screen. 
+A green and red LED are used to indicate 24 hour price increases and decreases consecutively. 
+
+"""
+
 #--- Import packages.
 from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
