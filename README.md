@@ -31,18 +31,11 @@ The hardware components required for this porject are as follows:
 ## "Hardware connection/Circuit"
 
 
-## Flow chart again?
 
 ## Fritzing
-where will this be included?
 <p align="center">
   <img src=images/bitcoin_ticker_conn.png>
 </p>
-
-Where do we specify need for internet connection?
-
-
-Mention python example for using coinmarketcap api
 
 https://coinmarketcap.com/api/documentation/
 
