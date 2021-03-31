@@ -1,5 +1,7 @@
 # LCD Bitcoin Ticker
 
+(To Be Completed)
+
 In this project, a 16x2 LCD "screen" is used to display the current Bitcoin (BTC) price "and its percentage change in price in the past 24 hours". A Raspberry Pi (RPi) Zero W is the single board computer used to obtain the BTC price data via the CoinmarketCap API. Two light-emitting diodes (LEDs) are connected "in the circuit" to indicate when there is a positive or negative percentage change in the price "after 24 hours".
 
 ## Hardware
