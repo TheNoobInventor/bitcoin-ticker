@@ -43,10 +43,10 @@ parameters = {
     'convert': 'USD'
 }
 
-#--- Define header information.
+#--- Define header information. 
 headers = {
     'Accepts': 'application/json', # Specifies the type of data to be sent back from the server.
-    'X-CMC_PRO_API_KEY': 'API-KEY' # Replace 'API-KEY' with the key provided from CoinmarketCap.
+    'X-CMC_PRO_API_KEY': 'API-KEY' # Replace 'API-KEY' with the key provided by CoinmarketCap.
 }
 
 #--- Initialize session object used to persist information across requests - headers in this case.
