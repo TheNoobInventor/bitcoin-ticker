@@ -20,7 +20,7 @@ The hardware components required for this project are as follows:
 
 - Full sized breadboard
 
-- Jumper cables: male-male, female-male dupoint.
+- Jumper cables: male-male, female-male dupoint cables
 
 - Monitor
 
