@@ -112,10 +112,6 @@ Mention python example for using coinmarketcap api
 Rate limit of 30 requests per minute
 Most endpoints update every minute
 
-
-## Flowchart again?
-
-
 where to mention that the main.py file is the "main" file. talk about cloning the repo or are we just assuming that they should know. But write a line or two to make it accessible to any newbie (that's what we are pushing for).
 
 ## "Picture"
