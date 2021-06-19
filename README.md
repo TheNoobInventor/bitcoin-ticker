@@ -28,7 +28,7 @@ The hardware components required for this project are as follows:
 
 - Keyboard and mouse.
 
-"Additionally an internet connection is required in this project to obtain data from the CoinmarketCap API".
+"Additionally an internet connection is required in this project to obtain data from the CoinmarketCap API". I don't think this is necessary.
 
 ## Project Wiring
 
