@@ -8,7 +8,7 @@ The hardware components required for this project are as follows:
 
 - Raspberry Pi Zero + power supply
 
-- "Mini HDMI cable"
+- Mini HDMI cable
 
 - 16x2 LCD screen
 
@@ -18,7 +18,7 @@ The hardware components required for this project are as follows:
 
 - 2 x LEDs - one red and the other green
 
-- Breadboard (what size?)
+- Full sized breadboard
 
 - Jumper cables (what types?)
 
@@ -124,8 +124,6 @@ where to mention that the main.py file is the "main" file. talk about cloning th
 <p align="center">
   <img src=images/angled_view.jpg>
 </p>
-
-Mention that I didn't have the full sized breadboard
 
 
 ## Video demo
