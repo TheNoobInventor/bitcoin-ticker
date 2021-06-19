@@ -36,7 +36,7 @@ The wiring for the project is shown in the figure below.
 
 
 <p align="center">
-  <img src=images/bitcoin_ticker_conn.png>
+  <img src=images/bitcoin_ticker_fritz.png>
 </p>
 
 The jumper cables are used in connecting the LCD screen, Raspberry Pi Zero and the LEDs as follows:
@@ -75,9 +75,6 @@ More information about the LCD pinout can be obtained [here](https://www.hackste
 
 **Raspberry Pi OS** is the operating system used on the Raspberry Pi 4. The download and installation procedure can be found [here](https://www.raspberrypi.org/software/). **Python 3** and the lcd library
 
-
-
-
 where I got the library (or have a separate link for the lib?):
 https://www.hackster.io/trduunze/raspberry-pi-lcd-screen-339eb5
 
@@ -114,7 +111,20 @@ Most endpoints update every minute
 
 where to mention that the main.py file is the "main" file. talk about cloning the repo or are we just assuming that they should know. But write a line or two to make it accessible to any newbie (that's what we are pushing for).
 
-## "Picture"
+## Images
+
+<p align="center">
+  <img src=images/top_view.jpg>
+</p>
+
+<p align="center">
+  <img src=images/side_view.jpg>
+</p>
+
+<p align="center">
+  <img src=images/angled_view.jpg>
+</p>
+
 Mention that I didn't have the full sized breadboard
 
 
