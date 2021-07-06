@@ -12,7 +12,7 @@ jobs:
       uses: errata-ai/vale-action@v1.4.0
       with:
         # Optional
-        styles: |
+        styles: 
           https://github.com/errata-ai/Google/releases/latest/download/Google.zip
           https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
 
