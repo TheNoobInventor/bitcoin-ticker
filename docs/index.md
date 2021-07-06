@@ -68,7 +68,7 @@ LCD pin 15 > 5V
 
 LCD pin 16 > GND
 
-Pin 3 of the LCD is connected in line with a 5K Ohm trimmer potentiometer to dim the display for legibility. The green and red LEDs are connected to the RPi pins GPIO27 and GPIO4 consecutively to be controlled in the python code. "220 Ohm resistors are connected in line with the LEDs".
+Pin 3 of the LCD is connected in line with a 5K Ohm trimmer potentiometer to dim the display for legibility. The green and red LEDs are connected to the RPi pins GPIO27 and GPIO4 consecutively to be controlled in the python code. "220 Ohm resistors are connected in line with the LEDs."
 
 More information about the LCD pinout can be obtained [here](https://www.hackster.io/trduunze/raspberry-pi-lcd-screen-339eb5).
 
