@@ -1,4 +1,4 @@
-name: Publish docs via github pages
+name: Publish docs via GitHub pages
 on:
   push:
     branches:
@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      # - run: pip install git+https://${PERSONAL_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install git+https://${PERSONAL_TOKEN}@github.com/squidfunk/mkdocs-material.git
       # - run: mkdocs gh-deploy --force
       - run: mkdocs gh-deploy
 env:
