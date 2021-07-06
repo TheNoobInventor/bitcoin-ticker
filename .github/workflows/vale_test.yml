@@ -24,4 +24,4 @@ jobs:
         # files: path/to/lint
 env:
   # Required
-  GITHUB_TOKEN: ${{secrets.PERSONAL_TOKEN}}
+  GITHUB_TOKEN: ${{secrets.VALE_PERSONAL_TOKEN}}
