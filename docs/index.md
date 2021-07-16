@@ -127,7 +127,7 @@ The image below shows an output of the main program on the LCD, with the amber L
 
 The following video walks through the API setup process, and runs `main.py` to output the BTC price and its 24 hour percentage change on the LCD.
 
-Check snake_game README for thumbnail
+(to be done)
 
 ## References
 - [Raspberry Pi LCD screen](https://www.hackster.io/trduunze/raspberry-pi-lcd-screen-339eb5)
