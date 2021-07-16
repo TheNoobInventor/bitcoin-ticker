@@ -110,13 +110,11 @@ headers = {
     'X-CMC_PRO_API_KEY': 'API-KEY' # Replace 'API-KEY' with the key provided by CoinmarketCap.
 } 
 ```
-
 After the API key substitution, the program is executed by running the following command in the terminal:
 
 ```
 python main.py
 ```
-
 The image below shows an output of the main program on the LCD, with the amber LED indicating a positive price change over the past 24 hours.
 
 <p align="center">
