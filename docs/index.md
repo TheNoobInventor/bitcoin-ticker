@@ -1,8 +1,6 @@
-# LCD Bitcoin Ticker
+# Lcd Bitcoin Ticker
 
-In this project, a 16x2 LCD screen is used to display the current Bitcoin (BTC) price and its percentage change in price in the past 24 hours. A Raspberry Pi (RPi) Zero W is the single board computer used to obtain the BTC price data via the CoinmarketCap API. Two light-emitting diodes (LEDs) are connected in a circuit on a breadboard to indicate a positive or negative percentage change in the price after 24 hours.
-
-(to be completed)
+In this project, a 16x2 Liquid Crystal Display (LCD) screen is used to display the current Bitcoin (BTC) price and its percentage price change in the past 24 hours. A Raspberry Pi (RPi) Zero W is the single board computer used to obtain the BTC price data via the CoinmarketCap API. Two light-emitting diodes (LEDs) are connected in a circuit on a breadboard to indicate either a positive or negative percentage price change in the past 24 hours.
 
 ## Hardware
 
@@ -20,7 +18,7 @@ The hardware components required for this project are as follows:
 
 - 2 x 220 ohm resistors
 
-- 2 x LEDs - one red and the other green
+- 2 x LEDs - one red and the other green (however an amber LED was used in place of the green)
 
 - Full sized breadboard
 
@@ -28,11 +26,11 @@ The hardware components required for this project are as follows:
 
 - Monitor
 
-- USB hub/accessory to for keyboard and mouse to be plugged into the RPi)
+- USB hub/accessory for the keyboard and mouse to be plugged into the RPi
 
 - Keyboard and mouse.
 
-### Project Wiring
+### Project wiring
 
 The wiring for the project is shown in the figure below.
 
@@ -40,7 +38,7 @@ The wiring for the project is shown in the figure below.
   <img src=images/bitcoin_ticker_fritz.png>
 </p>
 
-The jumper cables are used in connecting the LCD screen, Raspberry Pi Zero and the LEDs as follows:
+Jumper cables are used in connecting the LCD screen, Raspberry Pi Zero and the LEDs together. The LCD pin onnections are as follows:
 
 LCD pin 1 > GND
 
@@ -54,7 +52,7 @@ LCD pin 5 > GND
 
 LCD pin 6 > GPIO 24
 
-LCD pin 7 - 10 > No connections
+LCD pin 7 to 10 > No connections
 
 LCD pin 11 > GPIO 23
 
@@ -68,14 +66,12 @@ LCD pin 15 > 5V
 
 LCD pin 16 > GND
 
-Pin 3 of the LCD is connected in line with a 5K Ohm trimmer potentiometer to dim the display for legibility. The green and red LEDs are connected to the RPi pins GPIO27 and GPIO4 consecutively to be controlled in the python code. "220 Ohm resistors are connected in line with the LEDs."
+Pin 3 of the LCD is connected in line with a 5K Ohm trimmer potentiometer to dim the display for legibility. The green and red LEDs, connected in line with 220 Ohm resistors, are connected to the RPi pins GPIO27 and GPIO4 consecutively.
 
-More information about the LCD pinout can be obtained [here](https://www.hackster.io/trduunze/raspberry-pi-lcd-screen-339eb5).
-
-"assembled below"
+The following pictures show the components fully assembled. 
 
 <p align="center">
-  <img src=images/top_view.jpg>
+  <img src=images/top_view_assembled.jpg>
 </p>
 
 <p align="center">
@@ -86,57 +82,54 @@ More information about the LCD pinout can be obtained [here](https://www.hackste
   <img src=images/angled_view.jpg>
 </p>
 
+After assembling the project, the next step is to install the operating system and clone this repository.
+
 ## Software
 
-### Software architecture
+**Raspberry Pi OS** is the operating system running on the Raspberry Pi Zero W. The download and installation procedures are detailed [here](https://www.raspberrypi.org/software/). 
 
-**Raspberry Pi OS** is the operating system used on the Raspberry Pi 4. The download and installation procedure can be found [here](https://www.raspberrypi.org/software/). **Python 3** and the lcd library
+This repository contains a well commented `main.py` file for this project is written in **Python 3** and makes use of LCD library in the file `lcdlib.py`. The LCD library in use can be found [here](https://www.hackster.io/trduunze/raspberry-pi-lcd-screen-339eb5).
 
-where I got the library (or have a separate link for the lib?):
-https://www.hackster.io/trduunze/raspberry-pi-lcd-screen-339eb5
+The LCD is initialized in line 21 in `main.py`, with the LCD pins declared earlier, as follows:
 
-explain installation procedure for the library
+```
+lcd.init(25,24,23,17,18,22,16)
+````
 
-Edit below::
-Before we start programming we need to install a library I created [here](https://github.com/Grant-P-W/lcd_lib). To do this, we must first go there and download the library as a zip folder. Then, extract it to wherever you want using the archive manager. Now we have to open the terminal to move the file to the correct location. Let's use the mv command for this. Just type or copy the following into your terminal replacing `/home/pi/Wherever_You_Extracted_Your_Folder_To/lcd_lib-master/lcdlib.py` with the path to the lcdlib.py file.
+The BTC price and percentage change data are now required. The CoinMarketCap Application Programming Interface (API) is used to obtain this information that will be outputted to the LCD.
 
-`sudo mv -v /home/pi/Wherever_You_Extracted_Your_Folder_To/lcd_lib-master/lcdlib.py /usr/lib/python3.4`
-If you use a different virsion of python, that is, python2.7, replace the python3.4 to whatever version you use.
+### CoinMarketCap Api
 
+An API key is needed to access the data required by `main.py` file. A basic API plan, created and accessed [here](https://coinmarketcap.com/api/) will suffice for this project. With this plan, 30 API requests can be made per minute and depending on the endpoints (data available such as fiat currencies, cryptocurrencies and more) chosen, updates can be expected every minute.
 
-The code is rather easy. At the beginning of each script, you must import the library by typing: import lcdlib as lcd . Then, remember to define your RAM addresses, in my case:
+The python example shown in the [quick start guide](https://coinmarketcap.com/api/documentation/v1/#section/Quick-Start-Guide) was adapted and used in this project. In the following code block, lines 47 to 50 in `main.py`, 'API-KEY' is replaced by the API key provided by CoinMarketCap.
 
-`LCD_LINE_1 = 0x80`
+```
+headers = {
+    'Accepts': 'application/json', # Specifies the type of data to be sent back from the server.
+    'X-CMC_PRO_API_KEY': 'API-KEY' # Replace 'API-KEY' with the key provided by CoinmarketCap.
+} 
+```
 
-`LCD_LINE_2 = 0xC0`
-Now the last bit of initialization is the lcd.init() function, which we talked about earlier.
+After the API key substitution, the program is executed by running the following command in the terminal:
 
-Now you can use the lcd.string() to display your text.
+```
+python main.py
+```
 
-### Software install/setup
-how to download and run the code
+The image below shows an output of the main program on the LCD, with the amber LED indicating a positive price change over the past 24 hours.
 
-
-### CoinmarketCap API
-
-get your api key https://coinmarketcap.com/api/
-
+<p align="center">
+  <img src=images/top_view_code_running.jpg>
+</p>
 
 ## Video demonstration
+
+The following video walks through the API setup process, and runs `main.py` to output the BTC price and its 24 hour percentage change on the LCD.
+
 Check snake_game README for thumbnail
 
-
-## Observations
-If you use the Raspberry Pi Logo in this way on a website, the logo must link to our website at http://www.raspberrypi.org
-
-Mention python example for using coinmarketcap api
-
-[CoinmarketCap Docs](https://coinmarketcap.com/api/documentation/)
-
-
-Rate limit of 30 requests per minute
-Most endpoints update every minute
-
-where to mention that the main.py file is the "main" file. talk about cloning the repo or are we just assuming that they should know. But write a line or two to make it accessible to any newbie (that's what we are pushing for).
-
 ## References
+- [Raspberry Pi LCD screen](https://www.hackster.io/trduunze/raspberry-pi-lcd-screen-339eb5)
+
+- [CoinmarketCap Docs](https://coinmarketcap.com/api/documentation/)

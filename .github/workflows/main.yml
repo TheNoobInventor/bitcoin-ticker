@@ -16,5 +16,5 @@ jobs:
       - run: pip install git+https://${PERSONAL_TOKEN}@github.com/squidfunk/mkdocs-material.git
       - run: mkdocs gh-deploy --force
 env:
-  GH_TOKEN: ${{ secrets.PERSONAL_TOKEN}}
+  GH_TOKEN: ${{secrets.PERSONAL_TOKEN}}
 
