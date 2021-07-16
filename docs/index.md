@@ -92,8 +92,9 @@ This repository contains a well commented `main.py` file for this project is wri
 
 The LCD is initialized in line 21 in `main.py`, with the LCD pins declared earlier, as follows:
 
-
-`lcd.init(25,24,23,17,18,22,16)`
+```python
+lcd.init(25,24,23,17,18,22,16)
+```
 
 The BTC price and percentage change data are now required. The CoinMarketCap Application Programming Interface (API) is used to obtain this information that will be outputted to the LCD.
 
@@ -104,7 +105,7 @@ An API key is needed to access the data required by `main.py` file. A basic API 
 The python example shown in the [quick start guide](https://coinmarketcap.com/api/documentation/v1/#section/Quick-Start-Guide) was adapted and used in this project. In the following code block, lines 47 to 50 in `main.py`, 'API-KEY' is replaced by the API key provided by CoinMarketCap.
 
 
-```
+```python
 headers = {
     'Accepts': 'application/json', # Specifies the type of data to be sent back from the server.
     'X-CMC_PRO_API_KEY': 'API-KEY' # Replace 'API-KEY' with the key provided by CoinmarketCap.
