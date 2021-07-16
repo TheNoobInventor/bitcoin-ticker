@@ -92,9 +92,8 @@ This repository contains a well commented `main.py` file for this project is wri
 
 The LCD is initialized in line 21 in `main.py`, with the LCD pins declared earlier, as follows:
 
-```
-lcd.init(25,24,23,17,18,22,16)
-````
+
+`lcd.init(25,24,23,17,18,22,16)`
 
 The BTC price and percentage change data are now required. The CoinMarketCap Application Programming Interface (API) is used to obtain this information that will be outputted to the LCD.
 
