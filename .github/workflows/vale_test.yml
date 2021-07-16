@@ -10,7 +10,7 @@ jobs:
 
     - name: Vale
       uses: errata-ai/vale-action@v1.4.2
-      # with:
+      with:
         # Optional
         # styles:
         #   https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip

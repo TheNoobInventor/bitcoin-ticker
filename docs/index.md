@@ -104,17 +104,22 @@ An API key is needed to access the data required by `main.py` file. A basic API 
 
 The python example shown in the [quick start guide](https://coinmarketcap.com/api/documentation/v1/#section/Quick-Start-Guide) was adapted and used in this project. In the following code block, lines 47 to 50 in `main.py`, 'API-KEY' is replaced by the API key provided by CoinMarketCap.
 
+
 ```
 headers = {
     'Accepts': 'application/json', # Specifies the type of data to be sent back from the server.
     'X-CMC_PRO_API_KEY': 'API-KEY' # Replace 'API-KEY' with the key provided by CoinmarketCap.
 } 
 ```
+
+
 After the API key substitution, the program is executed by running the following command in the terminal:
+
 
 ```
 python main.py
 ```
+
 The image below shows an output of the main program on the LCD, with the amber LED indicating a positive price change over the past 24 hours.
 
 <p align="center">
