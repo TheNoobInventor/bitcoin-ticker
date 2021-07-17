@@ -28,7 +28,7 @@ The hardware components required for this project are as follows:
 
 - USB hub/accessory for the keyboard and mouse to be plugged into the RPi
 
-- Keyboard and mouse.
+- Keyboard and mouse
 
 ### Project wiring
 
