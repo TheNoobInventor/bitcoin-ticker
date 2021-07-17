@@ -1,5 +1,7 @@
 site_name: LCD Bitcoin Ticker
-site_url: https://example.com/
+site_url: ''
+use_directory_urls: False
+edit_uri: ""
 
 theme:
   name: material
