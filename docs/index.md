@@ -82,7 +82,7 @@ The following pictures show the components fully assembled.
   <img src=images/angled_view.jpg>
 </p>
 
-After assembling the project, the next step is to install the operating system and clone this repository.
+After assembling the project, the next step is to install the operating system (OS) for the Raspberry Pi Zero W and clone this repository.
 
 ## Software
 
@@ -112,11 +112,9 @@ headers = {
 } 
 ```
 
-
 After the API key substitution, the program is executed by running the following command in the terminal:
 
-
-```
+```python
 python main.py
 ```
 
