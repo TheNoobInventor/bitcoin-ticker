@@ -22,7 +22,7 @@ The hardware components required for this project are as follows:
 
 - Full sized breadboard
 
-- Jumper cables: male-male, female-male dupoint cables
+- Jumper cables: male-male, female-male dupont cables
 
 - Monitor
 
@@ -38,7 +38,7 @@ The wiring for the project is shown in the figure below.
   <img src=images/bitcoin_ticker_fritz.png>
 </p>
 
-Jumper cables are used in connecting the LCD screen, Raspberry Pi Zero and the LEDs together. The LCD pin onnections are as follows:
+Jumper cables are used in connecting the LCD screen, Raspberry Pi Zero and the LEDs together. The LCD pin connections are as follows:
 
 LCD pin 1 > GND
 
