@@ -112,7 +112,7 @@ headers = {
 } 
 ```
 
-After the API key substitution, the program is executed by running the following command in the terminal:
+After the API key substitution, the program is executed by either running it directly from an Integrated Development Environment (IDE) or running the following command in the terminal where this repository lies:
 
 ```python
 python main.py
@@ -128,7 +128,7 @@ The image below shows an output of the main program on the LCD, with the amber L
 
 The following video walks through the API setup process, and runs `main.py` to output the BTC price and its 24 hour percentage change on the LCD.
 
-(to be done)
+[<img src="images/top_view_code_running.jpg" width="50%">](https://youtu.be/LvblNuMGtKQ)
 
 ## References
 - [Raspberry Pi LCD screen](https://www.hackster.io/trduunze/raspberry-pi-lcd-screen-339eb5)
