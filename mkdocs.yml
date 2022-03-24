@@ -1,5 +1,5 @@
 site_name: LCD Bitcoin Ticker
-site_url: ''
+site_url: 'https://thenoobinventor.github.io/lcd-bitcoin-ticker/'
 use_directory_urls: False
 edit_uri: ""
 
@@ -16,6 +16,12 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
 repo_url: https://github.com/TheNoobInventor/lcd-bitcoin-ticker
 repo_name: TheNoobInventor/lcd-bitcoin-ticker
 plugins:
