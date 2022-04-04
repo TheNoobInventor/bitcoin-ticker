@@ -1,3 +1,5 @@
+![Mkdocs workflow](https://github.com/TheNoobInventor/lcd-bitcoin-ticker/actions/workflows/.github/workflows/main.yml/badge.svg)
+
 # Lcd Bitcoin Ticker
 
 <p align='center'>
